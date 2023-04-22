@@ -1,0 +1,29 @@
+.app-container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.title-container{
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 4;
+}
+.title-container h1 {
+  font-size: 3rem;
+}
+.title-container h1  img {
+  margin-left: 10px ; 
+  margin-right: 10px ; 
+}
+.form-container{
+  background-color: lightblue;
+  border-radius: 5px;
+  margin: 2px;
+  padding:5px;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+}
