@@ -61,7 +61,10 @@ export default function ImageDisplay({ imageUrl, imageManipulation}: Props) {
   if (!imageUrl) {
     return (
     <div className={styles.container}>
-      <div className={ styles['image-wrapper'] }>Please enter an image URL</div>
+      <div 
+        id="memeImageWrapper"
+        data-testid="memeImageWrapper"
+        className={ styles['image-wrapper'] }>Please enter an image URL</div>
     </div>
     );
   }
@@ -72,8 +75,13 @@ export default function ImageDisplay({ imageUrl, imageManipulation}: Props) {
   }
   return (
     <div className={styles.container}>
-        <div className={ styles['image-wrapper']  } style={getImageWrapperStyle(imageManipulation, loadedSuccessfully, intrinsicWidth)}>
+        <div 
+        id="memeImageWrapper"
+        data-testid="memeImageWrapper"
+        className={ styles['image-wrapper']  } style={getImageWrapperStyle(imageManipulation, loadedSuccessfully, intrinsicWidth)}>
           <img 
+            id="memeImage"
+            data-testid="memeImage"
             style={getImageStyle(imageManipulation, loadedSuccessfully, intrinsicWidth)}
             src={imageUrl}
             alt="I'm sorry, we failed to load that asset. Are you sure it is the correct URL?" 

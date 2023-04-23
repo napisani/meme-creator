@@ -5,9 +5,9 @@
    onImageUrlChange: (imageUrl: string) => void
  }
 
- export default function ImageURLInput(props: Props) {
+ export default function ImageURLInput({imageUrl, onImageUrlChange}: Props) {
    function handleChange(event: React.ChangeEvent<HTMLInputElement>) {
-     props.onImageUrlChange(event.target.value)
+     onImageUrlChange(event.target.value)
    }
    return (
      <div>
@@ -15,7 +15,7 @@
        <input data-testid="urlInput" 
          id="urlInput" 
          type="text" 
-         value={props.imageUrl ?? ''} 
+         value={imageUrl ?? ''} 
          onChange={handleChange}/>
      </div>
    )

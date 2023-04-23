@@ -7,8 +7,8 @@ describe('TextPositionSelector', () => {
   it('the TextPositionSelector gets rendered', () => {
     const onChange = jest.fn();
     render(<TextPositionSelector value={TextPosition.TOP} onValueChange={onChange} />);
-    const linkElement = screen.getByText(/Text Position:/i);
-    expect(linkElement).toBeInTheDocument();
+    const el = screen.getByText(/Text Position:/i);
+    expect(el).toBeInTheDocument();
   });
   it('clicking textPosition bottom radio button fires an onValueChange event', () => {
     const onChange = jest.fn();
