@@ -1,15 +1,15 @@
-.container{
-  margin-top: 2rem; 
+.container {
+  margin-top: 2rem;
   width: 100%;
 }
-.image-wrapper{
+.image-wrapper {
   text-align: center;
   position: relative;
 }
 .text-overlay {
   position: absolute;
   width: 100%;
-  
+
   margin: 0 auto;
   font-size: 1.5rem;
 }

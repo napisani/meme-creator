@@ -1,3 +1,4 @@
+import React from 'react';
 import { render, screen } from '@testing-library/react';
 import MemeGenerator from './MemeGenerator';
 describe('MemeGenerator', () => {

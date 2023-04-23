@@ -6,7 +6,7 @@ import Toolbar from './toolbar/Toolbar';
 import logo from './logo.png';
 import styles from './MemeGenerator.module.css';
 export default function MemeGenerator() {
-  const [imageUrl, setImageUrl] = useState('https://clinicaltrialmedia.com/wp-content/uploads/2019/06/CTM-logo.png');
+  const [imageUrl, setImageUrl] = useState('');
   const [imageManipulation, setImageManipulation] = useState(getDefaultImageManipulation());
   return (
     <div className={styles['app-container']}>

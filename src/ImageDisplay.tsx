@@ -1,4 +1,4 @@
-import {  CSSProperties, SyntheticEvent, useState } from 'react'
+import React, {  CSSProperties, SyntheticEvent, useState } from 'react'
 import { ImageManipulation, TextPosition } from './lib/interface'
 import styles from './ImageDisplay.module.css'
 type Props = {
@@ -9,7 +9,7 @@ type Props = {
 function getWidth(scale: number, intrinsicWidth: number) {
   return `${intrinsicWidth * (scale / 100.0)}px`
 }
-function getTextOverlayStyle(imageManipulation: ImageManipulation, loadedSuccessfully: boolean, intrinsicWidth: number) {
+function getTextOverlayStyle(imageManipulation: ImageManipulation, loadedSuccessfully: boolean ) {
   if (!loadedSuccessfully) {
     return {}
   }
@@ -93,7 +93,7 @@ export default function ImageDisplay({ imageUrl, imageManipulation}: Props) {
           id="memeTextOverlay"
           data-testid="memeTextOverlay"
           className={styles['text-overlay']}
-          style={getTextOverlayStyle(imageManipulation, loadedSuccessfully, intrinsicWidth)}>
+          style={getTextOverlayStyle(imageManipulation, loadedSuccessfully)}>
           {imageManipulation.textOverlay}
         </div>
         )}

@@ -1,4 +1,5 @@
-import {  fireEvent, render, screen } from '@testing-library/react';
+import React from 'react';
+import { fireEvent, render, screen } from '@testing-library/react';
 import ImageDisplay from './ImageDisplay';
 import { getDefaultImageManipulation, TextPosition } from './lib/interface';
 const staticImage='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg=='
