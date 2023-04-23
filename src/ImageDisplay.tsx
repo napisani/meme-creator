@@ -90,6 +90,8 @@ export default function ImageDisplay({ imageUrl, imageManipulation}: Props) {
         /> 
         {loadedSuccessfully && (
         <div 
+          id="memeTextOverlay"
+          data-testid="memeTextOverlay"
           className={styles['text-overlay']}
           style={getTextOverlayStyle(imageManipulation, loadedSuccessfully, intrinsicWidth)}>
           {imageManipulation.textOverlay}
